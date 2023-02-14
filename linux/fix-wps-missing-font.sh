@@ -1,12 +1,12 @@
 #!/bin/sh
 
 Ver=v0.0.1
-DownloadUrl=https://github.com/cuihairu/fix-wps-missing-fonts/releases/download/${Ver}/fonts.tar.xz
+DownloadUrl=https://github.com/cuihairu/scriptlet/releases/download/${Ver}/wps-fonts.tar.xz
 FontHome=/usr/share/fonts/wps-office
 TempFile=/tmp/wps-fonts.tar.xz
 
 if [ ! -d "${FontHome}" ];then
-	sudo mkdir ${FontHome}
+	sudo mkdir -p ${FontHome}
 fi 	
 
 wget -O ${TempFile} ${DownloadUrl} 
