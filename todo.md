@@ -17,7 +17,7 @@
 - 静态检查：`shellcheck -S error` 两脚本 clean；`sh -n` 通过。
 - 真机验证：`fix-wps` 对真实 Release 资产 `v0.0.1/wps-fonts.tar.xz` 端到端跑通（rc=0，字体 644 落盘，fc-cache succeeded）；`mount` 脚本对 `/dev/loop0` 挂载失败正确中止（rc=32，无挂载残留、未 chroot）；对真实 bind mount 的占用检测与 `unmount` 清理均实测生效（卸载后 0 残留）。
 - 未修（审核列为 P2，本次不动）：变量未加引号类历史写法已随重写收敛；下载无校验和（依赖 GitHub Release 完整性）；`dev.ps1`/`fix_win_time.bat` 的 P2 项。
-- 提交：`57d45c2`（单 commit，含脚本 + 测试 + README 索引同步）。
+- 提交：`28cf204`（代码+测试+README 一份 commit；随后 `docs: fix commit sha in todo ledger` 仅修正本行 sha）。
 
 ## 待办
 
