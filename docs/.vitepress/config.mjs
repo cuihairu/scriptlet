@@ -5,6 +5,9 @@ import { defineConfig } from 'vitepress'
 // the nav link (see docs/index.md and docs/zh/index.md).
 
 export default defineConfig({
+  // Project Pages site: /scriptlet/. CI passes DOCS_BASE; local builds fall
+  // back to the repository name.
+  base: process.env.DOCS_BASE || '/scriptlet/',
   lang: 'en',
   title: 'scriptlet',
   description: 'A collection of miscellaneous ops scripts.',
