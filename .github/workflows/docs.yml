@@ -35,6 +35,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
+        with:
+          # First run creates the Pages site (repo never had Pages enabled).
+          enablement: true
 
       - name: Install dependencies
         run: npm ci
