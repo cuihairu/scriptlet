@@ -42,6 +42,11 @@
 *.idb
 *.pdb
 
+# Docs site (vitepress)
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
