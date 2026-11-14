@@ -9,13 +9,16 @@ export default defineConfig({
   title: 'scriptlet',
   description: 'A collection of miscellaneous ops scripts.',
   // The doc-consistency audit ledger is a maintainer record, not site content.
-  srcExclude: ['**/审计-*.md'],
+  srcExclude: ['**/审计-*.md', '审计-*.md'],
   locales: {
     root: {
       label: 'English',
       lang: 'en',
       link: '/',
       themeConfig: {
+        // Manual language switch only: VitePress renders the locale dropdown
+        // from `locales` above. No client-side language detection is wired in.
+        langMenuLabel: 'Language',
         nav: [
           { text: '简体中文', link: '/zh/' },
           { text: 'GitHub', link: 'https://github.com/cuihairu/scriptlet' }
@@ -27,6 +30,7 @@ export default defineConfig({
       lang: 'zh-CN',
       link: '/zh/',
       themeConfig: {
+        langMenuLabel: '语言',
         nav: [
           { text: 'English', link: '/' },
           { text: 'GitHub', link: 'https://github.com/cuihairu/scriptlet' }
